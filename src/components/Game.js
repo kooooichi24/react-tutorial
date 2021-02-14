@@ -9,11 +9,13 @@ export const Game = () => {
 
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
-  let status;
-  if (winner) {
-    status = 'Winner: ' + winner;
-  } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+
+  const getStatus = () => {
+    if (winner) {
+      return 'Winner: ' + winner;
+    } else {
+      return 'Next player: ' + (xIsNext ? 'X' : 'O');
+    }
   }
 
   const handleClick = (i) => {
@@ -52,7 +54,7 @@ export const Game = () => {
         <Board squares={current.squares} onClick={(i) => handleClick(i)} />
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div>{getStatus()}</div>
         <ol>{moves}</ol>
       </div>
     </div>
