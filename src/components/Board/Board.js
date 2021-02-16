@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Square } from './Square';
+import { Square } from '../Square/Square';
+import './Board.css';
 
-export const Board = (props) => {
+export const Board = ({ squares, onClick }) => {
   const renderSquare = (i) => (
     <Square 
-      value={props.squares[i]}
-      onClick={() => props.onClick(i)}
+      value={squares[i]}
+      onClick={() => onClick(i)}
     />
   );
 
@@ -29,4 +31,9 @@ export const Board = (props) => {
       </div>
     </div>
   );
+}
+
+Board.propTypes = {
+  squares: PropTypes.array,
+  onClick: PropTypes.func,
 }
