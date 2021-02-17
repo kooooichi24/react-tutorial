@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Board } from '../components/Board/Board';
+import * as SquareStories from './Square.stories';
 
 export default {
   title: 'Board',
@@ -11,22 +12,22 @@ const Template = (args) => <Board {...args} />;
 
 export const AllNull = Template.bind({});
 AllNull.args = {
-  squares: Array(9).fill(null),
+  squares: Array(9).fill(SquareStories.Null.args.value),
 };
 
 export const AllCircle = Template.bind({});
 AllCircle.args = {
-  squares: Array(9).fill('O'),
+  squares: Array(9).fill(SquareStories.Circle.args.value),
 };
 
 export const AllCross = Template.bind({});
 AllCross.args = {
-  squares: Array(9).fill('X'),
+  squares: Array(9).fill(SquareStories.Cross.args.value),
 };
 
 export const AllTriangle = Template.bind({});
 AllTriangle.args = {
-  squares: Array(9).fill('△'),
+  squares: Array(9).fill(SquareStories.Triangle.args.value),
 };
 
 export const Random = Template.bind({});
