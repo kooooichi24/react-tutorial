@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# storybook を作ろう
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 課題内容
 
-## Available Scripts
+[airtable](https://airtable.com/tblTnXBXFOYJ0J7lZ/viwyi8muFtWUlhNKG/recWdySlizw8BgKzi?blocks=hide)
 
-In the project directory, you can run:
+## 課題 1(実装)
 
-### `yarn start`
+### Install package
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Run the app
 
-### `yarn test`
+```bash
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 課題 2(実装)
 
-### `yarn build`
+### Run the storybook
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn storybook
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 成果物
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- パス
+  - src/stories/
+- ファイル名
+  - Square.stories.js
+  - Board.stories.js
+  - Game.stories.js (盤面を △ で埋め尽くした状態の story を作ることができませんでした；；)
 
-### `yarn eject`
+## 課題 3(質問)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+あ
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 課題 4(クイズ)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### クイズ 1
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Args と Parameters をそれぞれ説明してください。
 
-## Learn More
+- [args](https://storybook.js.org/docs/react/writing-stories/args)
+- [parameters](https://storybook.js.org/docs/react/writing-stories/parameters)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 出題意図
+  - そもそも何が異なるのか？を明確にしてほしい。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details><summary>回答</summary><div>
 
-### Code Splitting
+- Args
+  - Component に渡す props を設定するための記法
+- Parameters
+  - Storybook の機能やアドオンを制御するための静的なデータセット
+- 違い
+  - そもそも、設定対象が異なる
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+</div></details>
 
-### Analyzing the Bundle Size
+### クイズ 2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Decorators を説明してください
 
-### Making a Progressive Web App
+<details><summary>回答</summary><div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</div></details>
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### クイズ 3
