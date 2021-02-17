@@ -28,9 +28,9 @@ export const Game = () => {
     }
     squares[i] = xIsNext ? 'X' : 'O';
 
-    setHistory(history.concat([{squares: squares}]))
+    setHistory(newHistory.concat([{squares: squares}]))
     setXIsNext(!xIsNext);
-    setStepNumber(history.length);
+    setStepNumber(newHistory.length);
   }
 
   const jumpTo = (step) => {
