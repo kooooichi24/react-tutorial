@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Game } from './components/Game/Game';
+import { TicTacToe } from './container/ticTacToe';
 import './index.css';
 
 ReactDOM.render(
-  <Game />,
+  <TicTacToe />,
   document.getElementById('root')
 );
