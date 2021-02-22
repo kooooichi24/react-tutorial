@@ -92,7 +92,12 @@ Loaders を説明してください
 
 <details><summary>回答</summary><div>
 
-- Decorators
-  - Story に対して、スタイル(レンダリング)をラップする方法
+- Loaders
+
+  - Story に対して、データをロードする非同期関数
+  - Loaders はストーリーのレンダリング前に実行される
+
+- 参考文献
+  - [Loaders (experimental)](https://storybook.js.org/docs/react/writing-stories/loaders)
 
 </div></details>
