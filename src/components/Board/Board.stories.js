@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Board } from '../components/Board/Board';
-import * as SquareStories from './Square.stories';
+import { Board } from './Board';
+import * as SquareStories from '../Square/Square.stories';
 
 export default {
   title: 'Board',
