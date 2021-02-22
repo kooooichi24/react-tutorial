@@ -37,9 +37,22 @@ yarn storybook
 
 ## 課題 3(質問)
 
-あ
+### メリット
+
+- Storybook が Document の役割も果たすため、プロジェクトに新たにアサインされた人が Storybook を見ることでコンポーネントの理解を補助する役割がある。
+- コンポーネントに対して任意の入力値を渡せるため、様々なケースを確認できること
+- コンポーネントの結合度を下げたり、単一責任原則に則ったコンポーネントとなる
+
+### デメリット
+
+- Story を書くためのコスト(時間)がかかる
+  - (Story を書くためのコストは、コンポーネントを書きおわった時が 1 番小さい！)
+- コンポーネントとストーリが一致していないと、Storybook の意義が失われる
 
 ## 課題 4(クイズ)
+
+- 出題意図
+  - Story を書く際に設定可能な Args, Parameters, Decorators, Loaders の役割をそれぞれ理解して欲しい。（一言で説明できるくらいで OK）
 
 ### クイズ 1
 
@@ -68,6 +81,18 @@ Decorators を説明してください
 
 <details><summary>回答</summary><div>
 
+- Decorators
+  - Story に対して、スタイル(レンダリング)をラップする方法
+
 </div></details>
 
 ### クイズ 3
+
+Loaders を説明してください
+
+<details><summary>回答</summary><div>
+
+- Decorators
+  - Story に対して、スタイル(レンダリング)をラップする方法
+
+</div></details>
