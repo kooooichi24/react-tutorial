@@ -44,7 +44,7 @@ yarn test storybook.test.js
 
 ### スナップショットテストの追加
 
-- ファイル
+- 追加ファイル
 
   - src/\_\_snapshots\_\_/Storybook.test.js.snap
   - src/Storybook.test.js
@@ -71,69 +71,42 @@ exports[`Storyshots ${fileName} ${storyName} 1`] = `
 
 ### マスに表示する文字を ox から 丁半 に変更
 
-## 課題 3(質問)
+- 変更ファイル
+  - src/components/Square/Square.stories.js
+  - src/components/Board/Board.stories.js
+  - src/components/Game/Game.stories.js
 
-### メリット
-
-- Storybook が Document の役割も果たすため、プロジェクトに新たにアサインされた人が Storybook を見ることでコンポーネントの理解を補助する役割がある。
-- コンポーネントに対して任意の入力値を渡せるため、様々なケースを確認できること
-- コンポーネントの結合度を下げたり、単一責任原則に則ったコンポーネントとなる
-
-### デメリット
-
-- Story を書くためのコスト(時間)がかかる
-  - (Story を書くためのコストは、コンポーネントを書きおわった時が 1 番小さい！)
-- コンポーネントとストーリが一致していないと、Storybook の意義が失われる
-
-## 課題 4(クイズ)
+## 課題 3(クイズ)
 
 - 出題意図
   - Story を書く際に設定可能な Args, Parameters, Decorators, Loaders の役割をそれぞれ理解して欲しい。（一言で説明できるくらいで OK）
 
 ### クイズ 1
 
-Args と Parameters をそれぞれ説明してください。
-
-- [args](https://storybook.js.org/docs/react/writing-stories/args)
-- [parameters](https://storybook.js.org/docs/react/writing-stories/parameters)
-
-- 出題意図
-  - そもそも何が異なるのか？を明確にしてほしい。
+hoge
 
 <details><summary>回答</summary><div>
 
-- Args
-  - Component に渡す props を設定するための記法
-- Parameters
-  - Storybook の機能やアドオンを制御するための静的なデータセット
-- 違い
-  - そもそも、設定対象が異なる
+- hoge
 
 </div></details>
 
 ### クイズ 2
 
-Decorators を説明してください
+hoge
 
 <details><summary>回答</summary><div>
 
-- Decorators
-  - Story に対して、スタイル(レンダリング)をラップする方法
+- hoge
 
 </div></details>
 
 ### クイズ 3
 
-Loaders を説明してください
+hoge
 
 <details><summary>回答</summary><div>
 
-- Loaders
-
-  - Story に対して、データをロードする非同期関数
-  - Loaders はストーリーのレンダリング前に実行される
-
-- 参考文献
-  - [Loaders (experimental)](https://storybook.js.org/docs/react/writing-stories/loaders)
+- hoge
 
 </div></details>
