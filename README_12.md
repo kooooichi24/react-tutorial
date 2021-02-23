@@ -36,20 +36,40 @@
 
 ## 課題 2(実装)
 
-### Run the storybook
+### Run the Storyshots
 
 ```bash
-yarn storybook
+yarn test storybook.test.js
 ```
 
-### 成果物
+### スナップショットテストの追加
 
-- パス
-  - src/stories/
-- ファイル名
-  - Square.stories.js
-  - Board.stories.js
-  - Game.stories.js (盤面を △ で埋め尽くした状態の story を作ることができませんでした；；)
+- ファイル
+
+  - src/\_\_snapshots\_\_/Storybook.test.js.snap
+  - src/Storybook.test.js
+
+- 疑問
+  - src 配下に storybook.test.js を作成したが、パスはふさわしいのかな?
+  - stories フォルダを削除したのだが、問題あったかな?
+  - project root 直下や stories ディレクトリ配下に storybook.test.js を作成して実行したが、何もならなかった
+    - story を src/components の各ディレクトリに作成したのだが、その影響?
+
+### 作成されたスナップショットにどんな情報が記載されているか
+
+作成済みの Story がレンダリングする DOM 要素が、`Storybook.test.js.snap`に記載されている
+
+[pretty-format](https://github.com/facebook/jest/tree/master/packages/pretty-format) に則った形式で出力される
+
+```js
+exports[`Storyshots ${fileName} ${storyName} 1`] = `
+<div>
+  ...
+</div>
+`;
+```
+
+### マスに表示する文字を ox から 丁半 に変更
 
 ## 課題 3(質問)
 
