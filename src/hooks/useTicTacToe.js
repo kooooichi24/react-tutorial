@@ -8,11 +8,14 @@ export const useTicTacToe = () => {
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
 
+  const CROSS = 'X';
+  const CIRCLE = 'O';
+
   const status = winner 
     ? 'Winner: ' + winner
     : current.squares.every(c => c !== null)
     ? 'Draw'
-    : 'Next player: ' + (xIsNext ? 'X' : 'O');
+    : 'Next player: ' + (xIsNext ? CROSS : CIRCLE);
 
   const handleClick = (i) => {
     const newHistory = history.slice(0, stepNumber + 1);
@@ -21,7 +24,7 @@ export const useTicTacToe = () => {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = xIsNext ? 'X' : 'O';
+    squares[i] = xIsNext ? CROSS : CIRCLE;
 
     setHistory(newHistory.concat([{squares: squares}]))
     setXIsNext(!xIsNext);
