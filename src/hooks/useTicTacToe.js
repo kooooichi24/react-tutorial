@@ -8,11 +8,14 @@ export const useTicTacToe = () => {
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
 
+  const CROSS = 'X';
+  const CIRCLE = 'O';
+
   const status = winner 
     ? 'Winner: ' + winner
     : current.squares.every(c => c !== null)
     ? 'Draw'
-    : 'Next player: ' + (xIsNext ? 'X' : 'O');
+    : 'Next player: ' + (xIsNext ? CROSS : CIRCLE);
 
   const handleClick = (i) => {
     const newHistory = history.slice(0, stepNumber + 1);
@@ -21,7 +24,7 @@ export const useTicTacToe = () => {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = xIsNext ? 'X' : 'O';
+    squares[i] = xIsNext ? CROSS : CIRCLE;
 
     setHistory(newHistory.concat([{squares: squares}]))
     setXIsNext(!xIsNext);
@@ -43,7 +46,7 @@ export const useTicTacToe = () => {
 }
 
 const calculateWinner= (squares) => {
-  const lines = [
+  const winPatternList = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -53,11 +56,15 @@ const calculateWinner= (squares) => {
     [0, 4, 8],
     [2, 4, 6],
   ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
+
+  const winPattern = winPatternList.find(
+    ([first, second, third]) => 
+      squares[first] &&
+      squares[first] === squares[second] &&
+      squares[first] === squares[third]
+  );
+
+  if (!winPattern) return null;
+
+  return squares[winPattern[0]];
 }

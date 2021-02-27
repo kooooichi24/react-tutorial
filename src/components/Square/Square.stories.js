@@ -10,8 +10,8 @@ export default {
 const Template = (args) => <Square {...args} />;
 
 
-export const Null = Template.bind({});
-Null.args = {
+export const Default = Template.bind({});
+Default.args = {
   value: null,
 };
 
@@ -29,4 +29,14 @@ Cross.args = {
 export const Triangle = Template.bind({});
 Triangle.args = {
   value: '△'
+};
+
+export const Han = Template.bind({});
+Han.args = {
+  value: '半'
+};
+
+export const Cho = Template.bind({});
+Cho.args = {
+  value: '丁'
 };
