@@ -4,31 +4,25 @@ import PropTypes from 'prop-types';
 import { Square } from '../Square/Square';
 import './Board.css';
 
-export const Board = ({ squares, onClick }) => {
-  const renderSquare = (i) => (
-    <Square 
-      value={squares[i]}
-      onClick={() => onClick(i)}
-    />
-  );
-
+export const Board = ({ width, height, squares, onClick }) => {
   return (
     <div>
-      <div className="board-row">
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
-      </div>
-      <div className="board-row">
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
-      </div>
-      <div className="board-row">
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
-      </div>
+      {Array.from(Array(height), (_, i) => {
+        return (
+          <div key={i} className="board-row">
+            {Array.from(Array(width), (_, j) => {
+              const n = i * width + j;
+              return (
+                <Square
+                  key={n}
+                  value={squares[n]}
+                  onClick={() => onClick(n)}
+                />
+              )
+            })}
+          </div>
+        )
+      })}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Board } from '../Board/Board';
 import './Game.css';
 
-export const Game = ({ history, handleClick, jumpTo, status, current }) => {
+export const Game = ({ width, height, history, handleClick, jumpTo, status, current }) => {
   const moves = history.map((step, move) => {
     const desc = move ?
       'Go to move #' + move :
@@ -19,7 +19,7 @@ export const Game = ({ history, handleClick, jumpTo, status, current }) => {
   return (
     <div className="game">
       <div className="game-board">
-        <Board squares={current.squares} onClick={(i) => handleClick(i)} />
+        <Board width={width} height={height} squares={current.squares} onClick={(i) => handleClick(i)} />
       </div>
       <div className="game-info">
         <div>{status}</div>
