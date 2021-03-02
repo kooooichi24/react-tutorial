@@ -30,7 +30,7 @@ const BoardAllCho = BoardStories.AllCho.args.squares;
 const baseArgs = {
   history: [{squares: BoardDefault}],
   current: {squares: BoardDefault},
-  status: 'Next player: X',
+  // status: 'Next player: X',
   handleClick: handleClick,
   jumpTo: jumpTo,
 }
@@ -139,4 +139,21 @@ export const AllCho = Template.bind({});
 AllCho.args = {
   ...baseArgs,
   current: {squares: BoardAllCho}
+}
+
+export const Draw = Template.bind({});
+Draw.args = {
+  history: [
+    {squares: [null, null, null, null, null, null, null, null, null]},
+    {squares: ['X', null, null, null, null, null, null, null, null]},
+    {squares: ['X', 'O', null, null, null, null, null, null, null]},
+    {squares: ['X', 'O', null, null, 'X', null, null, null, null]},
+    {squares: ['X', 'O', 'O', null, 'X', null, null, null, null]},
+    {squares: ['X', 'O', 'O', null, 'X', 'X', null, null, null]},
+    {squares: ['X', 'O', 'O', 'O', 'X', 'X', null, null, null]},
+    {squares: ['X', 'O', 'O', 'O', 'X', 'X', null, 'X', null]},
+    {squares: ['X', 'O', 'O', 'O', 'X', 'X', null, 'X', 'O']},
+    {squares: ['X', 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'O']},
+  ],
+  current: {squares: ['X', 'O', 'O', 'O', 'X', 'X', 'X', 'X', 'O']},
 }

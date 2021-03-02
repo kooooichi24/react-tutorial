@@ -7,7 +7,7 @@ export const TicTacToe = () => {
   const {
     history,
     current,
-    status,
+    xIsNext,
     handleClick,
     jumpTo,
   } = useTicTacToe(WIDTH, HEIGHT);
@@ -19,7 +19,7 @@ export const TicTacToe = () => {
       {...{
         history,
         current,
-        status,
+        xIsNext,
         handleClick,
         jumpTo
       }}
