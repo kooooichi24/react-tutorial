@@ -7,6 +7,10 @@ import * as SquareStories from '../Square/Square.stories';
 export default {
   title: 'Game',
   component: Game,
+  args: {
+    width: 3,
+    height: 3,
+  },
 };
 
 const Template = (args) => <Game {...args} />;

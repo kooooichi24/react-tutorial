@@ -6,6 +6,10 @@ import * as SquareStories from '../Square/Square.stories';
 export default {
   title: 'Board',
   component: Board,
+  args: {
+    width: 3,
+    height: 3,
+  },
 };
 
 const SquareDefault = SquareStories.Default.args.value;

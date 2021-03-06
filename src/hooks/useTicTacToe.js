@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export const useTicTacToe = () => {
-  const [history, setHistory] = useState([{squares: Array(9).fill(null)}]);
+export const useTicTacToe = (width, height) => {
+  const [history, setHistory] = useState([{squares: Array(width * height).fill(null)}]);
   const [xIsNext, setXIsNext] = useState(true);
   const [stepNumber, setStepNumber] = useState(0);
 
