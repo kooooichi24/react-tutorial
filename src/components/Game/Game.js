@@ -2,9 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Board } from '../Board/Board';
+import { calculateWinner } from '../../hooks/useTicTacToe';
 import './Game.css';
 
-export const Game = ({ width, height, history, handleClick, jumpTo, status, current }) => {
+export const Game = ({ width, height, history, handleClick, jumpTo, xIsNext, current }) => {
+  const winner = calculateWinner(current.squares);
+
+  const changeStatus = (winner) => {
+    if (winner) {
+      return 'Winner: ' + winner;
+    } else if (current.squares.every(c => c !== null)) {
+      return 'Draw';
+    } else {
+      return 'Next player: ' + (xIsNext ? 'X' : 'O');
+    }
+  }
+  const status = changeStatus(winner);
+
   const moves = history.map((step, move) => {
     const desc = move ?
       'Go to move #' + move :
